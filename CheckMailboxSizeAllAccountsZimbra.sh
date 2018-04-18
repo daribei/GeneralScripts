@@ -11,7 +11,7 @@ usage=`echo $line|cut -f2 -d " "`
 quota=`echo $line|cut -f3 -d " "`
 user=`echo $line|cut -f1 -d " "`
 status=`/opt/zimbra/bin/zmprov ga $user | grep  ^zimbraAccountStatus | cut -f2 -d " "`
-echo "$user `expr $usage / 1024 / 1024`Mb `expr $quota / 1024 / 1024`Mb ($status account)" >> $output
+echo "$user `expr $usage / 1024 / 1024`MB `expr $quota / 1024 / 1024`MB ($status account)" >> $output
 done
 
 ########################################################################
